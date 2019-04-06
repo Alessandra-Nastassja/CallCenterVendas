@@ -82,18 +82,22 @@ public class FornecedorServlet extends HttpServlet {
 		} catch (ValidacaoException e) {
 			request.setAttribute("mensagem", "Mensagem: " + e.getMessage());
 			request.setAttribute("fornecedor", fornecedor);
+			
 		} catch (SQLException e) {
 			request.setAttribute("mensagem", "Erro no banco de dados: " + e.getMessage());
 			request.setAttribute("fornecedor", fornecedor);
+			
 		} catch(ClassNotFoundException e){
 			request.setAttribute("mensagem", "Erro no driver: " + e.getMessage());
 			request.setAttribute("fornecedor", fornecedor);
 		}
 		try {
 			request.setAttribute("fornecedores",fornecedorDao.getFornecedores());
+			
 		}catch (SQLException e) {
 			request.setAttribute("mensagem", "Erro no banco de dados: " + e.getMessage());
 			request.setAttribute("fornecedor", fornecedor);
+			
 		} catch(ClassNotFoundException e){
 			request.setAttribute("mensagem", "Erro no driver: " + e.getMessage());
 			request.setAttribute("fornecedor", fornecedor);
