@@ -1,0 +1,13 @@
+Create database DB_CALL_CENTER;
+
+Use DB_CALL_CENTER;
+
+Create table TB_FORNECEDOR(
+	CD_FORNECEDOR INT NOT NULL AUTO_INCREMENT,
+    NM_FORNECEDOR VARCHAR(255) NOT NULL,
+    DS_EMAIL VARCHAR(255) NULL,
+	DS_RAZAO_SOCIAL VARCHAR(255) NOT NULL,
+    DS_CNPJ VARCHAR(255) NOT NULL,
+    PRIMARY KEY(CD_FORNECEDOR));
+    
+--Insert into TB_FORNECEDOR values (1, 'Alpargatas', 'alpargatas@teste.com', 'Alpargatas Havainas ', '111');
