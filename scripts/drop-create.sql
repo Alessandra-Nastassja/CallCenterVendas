@@ -1,3 +1,4 @@
+Drop database if exists DB_CALL_CENTER;
 Create database DB_CALL_CENTER;
 
 Use DB_CALL_CENTER;
@@ -10,4 +11,13 @@ Create table TB_FORNECEDOR(
     DS_CNPJ VARCHAR(255) NOT NULL,
     PRIMARY KEY(CD_FORNECEDOR));
     
---Insert into TB_FORNECEDOR values (1, 'Alpargatas', 'alpargatas@teste.com', 'Alpargatas Havainas ', '111');
+Insert into TB_FORNECEDOR values (1, 'Alpargatas', 'alpargatas@teste.com', 'Alpargatas Havainas ', '111');
+
+CREATE TABLE TB_CLIENTE (
+	CD_CLIENTE INT NOT NULL AUTO_INCREMENT,
+    NM_CLIENTE VARCHAR(255) NOT NULL,
+    DS_EMAIL VARCHAR(255) NULL,
+    PC_DESCONTO DOUBLE NOT NULL,
+    DS_CPF VARCHAR(255) NOT NULL,
+    PRIMARY KEY(CD_CLIENTE)
+);

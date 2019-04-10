@@ -12,6 +12,14 @@ public class Fornecedor extends Pessoa {
 	public Fornecedor() {
 		super();
 	}
+
+	public Fornecedor(Integer codigo, String email, String nome, String razaoSocial, String cnpj) {
+		super(codigo, email, nome);
+		this.razaoSocial = razaoSocial;
+		this.cnpj = cnpj;
+	}
+
+	/* Validação dos campos */
 	
 	public void valida() throws ValidacaoException{
 		super.valida();
@@ -22,13 +30,6 @@ public class Fornecedor extends Pessoa {
 			throw new ValidacaoException("Preencha corretamente o campo de CNPJ");
 		}
 	}
-
-	public Fornecedor(Integer codigo, String email, String nome, String razaoSocial, String cnpj) {
-		super(codigo, email, nome);
-		this.razaoSocial = razaoSocial;
-		this.cnpj = cnpj;
-	}
-
 
 	/* Getters and Setters */
 

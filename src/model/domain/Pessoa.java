@@ -13,19 +13,21 @@ public class Pessoa {
 		super();
 	}
 	
-	public void valida() throws ValidacaoException{
-		if(nome == null || nome.equals("")) {
-			throw new ValidacaoException("Preencha corretamente o campo de nome");
-		}
-	}
-	
 	public Pessoa(Integer codigo, String email, String nome) {
 		super();
 		this.codigo = codigo;
 		this.email = email;
 		this.nome = nome;
 	}
-
+	
+	/* Validação de campos */
+	
+	public void valida() throws ValidacaoException{
+		if(nome == null || nome.equals("")) {
+			throw new ValidacaoException("Preencha corretamente o campo de nome");
+		}
+	}
+	
 	/* Getters and Setters */
 	
 	public Integer getCodigo() {
