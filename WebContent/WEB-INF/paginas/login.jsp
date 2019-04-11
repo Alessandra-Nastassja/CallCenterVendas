@@ -9,19 +9,7 @@
 <body>
 	<form action="loginServlet" method="post">
 		Usuário: <br /><input type="text" name="usuario"><br />
-		Senha: <br /><input type="password" name="senha"><br />
+		Senha: <br /><input type="text" name="senha"><br />
 		<input type="submit" value="Logar" />
 	</form>
-	
-	<%
-		String usuario = request.getParameter("usuario");
-		String senha = request.getParameter("senha");
-		
-		if(usuario!= null && senha != null && usuario.isEmpty() && senha.isEmpty()){
-			session.setAttribute("usuario", usuario);
-			response.sendRedirect("dadosPessoaisServlet");
-			
-			
-		}
-	%>
 </body>
